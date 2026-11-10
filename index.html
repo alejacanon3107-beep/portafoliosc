@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sara Cañon · Social Media Strategist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Yellowtail&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f1eee8;--ink:#1c1a1a;--grey:#6a6560;--pink:#e63fbf;--sun:#fcd53f;--lilac:#b9a3e0;--mint:#7fd3c5;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;overflow-x:hidden}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px;position:relative}
+section{padding:90px 0;position:relative}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+
+/* tipografía */
+.script{font-family:'Yellowtail',cursive;color:var(--pink);font-weight:400;line-height:1;font-size:clamp(3.4rem,10vw,6.4rem);transform:rotate(-3deg);display:inline-block;margin-bottom:28px}
+h3{font-family:'Archivo Black',sans-serif;font-weight:400;font-size:clamp(1.5rem,3.4vw,2.2rem);line-height:1.1}
+h4{font-family:'Archivo Black',sans-serif;font-weight:400;color:var(--pink);font-size:.95rem;margin-bottom:6px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:20;background:rgba(241,238,232,.92);backdrop-filter:blur(8px)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:62px}
+nav .brand{font-family:'Yellowtail',cursive;font-size:1.8rem;color:var(--pink);text-decoration:none}
+nav ul{display:flex;gap:20px;list-style:none;font-size:.88rem;font-weight:500}
+nav ul a{text-decoration:none;color:var(--grey)}
+nav ul a:hover{color:var(--pink)}
+
+/* stickers */
+.burst{position:absolute;display:grid;place-items:center;text-align:center;font-family:'Yellowtail',cursive;line-height:.95;z-index:1}
+.sparkle{position:absolute;color:var(--sun);font-size:2rem;line-height:1;z-index:1}
+.sparkle.o{color:var(--ink);font-size:1.6rem}
+.tape{position:absolute;width:90px;height:30px;background:rgba(244,190,160,.8);top:-14px;left:50%;transform:translateX(-50%) rotate(-5deg)}
+
+/* INICIO */
+.btn{display:inline-block;margin-top:30px;padding:14px 30px;background:var(--ink);color:var(--white);border-radius:999px;text-decoration:none;font-weight:700;transition:.2s;position:relative;z-index:2}
+.btn:hover{background:var(--pink)}
+
+
+/* ===== HERO tipo póster ===== */
+.hero{padding:28px 0 70px;text-align:center}
+.plastic{position:relative;max-width:1020px;margin:0 auto;aspect-ratio:1.42/1;container-type:inline-size}
+.sheet-shadow{position:absolute;inset:0;filter:drop-shadow(0 14px 22px rgba(0,0,0,.12))}
+.sheet{position:absolute;inset:0;clip-path:polygon(1.5% 4%,22% 1%,50% 3%,78% 0,99% 3%,98% 38%,100% 70%,97% 99%,70% 97%,42% 100%,15% 98%,0 99%,2% 62%,0 30%);
+ background:linear-gradient(105deg,#fff 0,#f4f4f0 9%,#fff 18%,#fbfbf9 36%,#e9e9e4 44%,#fff 56%,#f2f2ee 70%,#fff 84%,#ebebe6 100%)}
+.sheet::after{content:'';position:absolute;inset:0;background:
+ linear-gradient(62deg,transparent 38%,rgba(110,110,105,.16) 38.3%,transparent 39.4%),
+ linear-gradient(-28deg,transparent 52%,rgba(255,255,255,.95) 52.3%,transparent 54%),
+ linear-gradient(80deg,transparent 18%,rgba(110,110,105,.12) 18.3%,transparent 19.4%),
+ linear-gradient(-70deg,transparent 70%,rgba(110,110,105,.12) 70.3%,transparent 71.5%),
+ radial-gradient(ellipse at 25% 15%,rgba(255,255,255,.95),transparent 45%),
+ radial-gradient(ellipse at 80% 85%,rgba(255,255,255,.9),transparent 40%)}
+.stage{position:absolute;inset:0}
+.stage>*{position:absolute}
+.title{left:0;right:0;top:15%;font-family:'Archivo Black',sans-serif;font-weight:400;font-size:17cqw;line-height:.88;letter-spacing:-.02em;color:#2b2a2a;margin:0;z-index:2;text-transform:uppercase}
+.title span{display:block}
+.title span:first-child{transform:translateX(-3%) rotate(-2deg)}
+.title span:last-child{transform:translateX(3%) rotate(1.5deg)}
+.role .sub{display:block;margin-top:.8cqw;font-family:'Archivo Black',sans-serif;font-size:2.4cqw;letter-spacing:.04em;color:#2b2a2a;text-transform:uppercase;transform:rotate(3deg);text-shadow:none}
+.role{left:0;right:0;top:63%;font-family:'Yellowtail',cursive;color:var(--pink);font-size:7.4cqw;line-height:1;transform:rotate(-3deg);z-index:3;text-shadow:0 0 .6cqw #fff,0 0 .6cqw #fff}
+.year{left:34%;bottom:7%;font-family:'Yellowtail',cursive;color:var(--pink);font-size:5.4cqw;line-height:1;text-decoration:underline wavy var(--lilac);text-decoration-thickness:.35cqw;text-underline-offset:1cqw;z-index:3;transform:rotate(-4deg)}
+.stage .burst{font-size:3.6cqw;color:var(--pink);z-index:4}
+.stage .burst span{display:block}
+.card{z-index:1;padding:1.2cqw 1.4cqw;border-radius:.6cqw;box-shadow:0 .6cqw 1.2cqw rgba(0,0,0,.12)}
+.card.pinkc{background:#f063c4;color:#fff;left:4%;top:5%;width:16cqw;transform:rotate(-5deg);font-family:'Archivo Black',sans-serif;font-size:2.7cqw;line-height:1}
+.card.pinkc i{font-family:'Yellowtail',cursive;font-style:normal;font-size:3.2cqw;color:var(--sun);display:block;margin-top:.4cqw}
+.card.greyc{background:#dcd8d0;right:6%;bottom:6%;width:21cqw;transform:rotate(4deg);font-family:'Archivo Black',sans-serif;font-size:2.4cqw;line-height:1.05;text-align:center;color:#2b2a2a;z-index:3}
+.card.greyc i{font-family:'Yellowtail',cursive;font-style:normal;color:var(--pink);font-size:3cqw;display:block}
+.card .tape{width:8cqw;height:2.4cqw;top:-1.2cqw}
+.mood{right:6%;top:5%;width:17cqw;padding:1.4cqw 0;border:.45cqw solid #f063c4;border-radius:45% 45% 50% 50%;text-align:center;font-family:'Yellowtail',cursive;color:#f063c4;font-size:3.6cqw;line-height:.95;transform:rotate(7deg);z-index:2;background:rgba(255,255,255,.6)}
+.doodle{z-index:3;width:7cqw;height:auto}
+.sp{z-index:3;width:4.6cqw;height:4.6cqw}
+.face{width:70%;height:70%}
+.hero .btn{margin-top:34px}
+
+/* ===== CENTRADO ===== */
+.wrap>.script{display:block;text-align:center}
+.about{justify-items:center;text-align:center}
+.about p{margin-left:auto;margin-right:auto}
+.facts{text-align:center}
+.facts li{padding:9px 0}
+.facts li::before{position:static;margin-right:8px}
+.project{text-align:center}
+.p-head{justify-content:center}
+.cols{justify-items:center}
+.cols p{max-width:34ch;margin:0 auto}
+.logo,.logo-big{margin-left:auto;margin-right:auto}
+.logo-big{margin-bottom:30px}
+.gallery{justify-content:center;justify-items:center;text-align:center}
+.gallery figure{width:100%}
+.video{margin-left:auto;margin-right:auto;text-align:center}
+@media(max-width:560px){.hide-s{display:none}.polaroid .burst{right:-4px!important;bottom:-14px!important}}
+@media(max-width:560px){
+  nav ul{gap:11px;font-size:.7rem;white-space:nowrap;overflow-x:auto;scrollbar-width:none;width:100%;justify-content:center}
+  nav .wrap{padding:0 12px}
+  .hero .wrap{padding:0 8px}
+  .plastic{aspect-ratio:1.05/1}
+  .title{font-size:21cqw;top:13%}
+  .role{top:58%;font-size:9.5cqw}
+  .role .sub{font-size:3.6cqw}
+  .year{bottom:9%;font-size:7cqw}
+  .stage .burst{font-size:4.4cqw}
+}
+
+
+/* SOBRE MÍ */
+.about{display:grid;grid-template-columns:.95fr 1.25fr;gap:56px;align-items:center}
+.polaroid{background:var(--white);padding:16px 16px 22px;border-radius:26px;position:relative;transform:rotate(-2deg);box-shadow:0 14px 30px rgba(0,0,0,.08)}
+.polaroid img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;display:block;background:var(--mint)}
+.about p{font-size:1.08rem;margin-bottom:16px;color:#3b3733;max-width:60ch}
+.facts{margin-top:28px;background:var(--lilac);border-radius:24px;padding:26px 28px}
+.facts h4{color:var(--ink);font-size:1.15rem;margin-bottom:12px}
+.facts li{list-style:none;padding:9px 0 9px 28px;position:relative;font-size:.98rem}
+.facts li::before{content:'✦';position:absolute;left:0;color:var(--sun);font-size:1.1rem;-webkit-text-stroke:.5px var(--ink)}
+
+/* PROYECTOS */
+.project{background:var(--white);border-radius:30px;padding:40px;position:relative;box-shadow:0 14px 30px rgba(0,0,0,.06)}
+.p-head{display:flex;align-items:center;gap:18px;margin-bottom:28px;flex-wrap:wrap}
+.logo{height:74px;width:auto;max-width:150px;object-fit:contain;flex:none}
+.logo.round{border-radius:50%}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.cols p{font-size:.97rem;color:#3b3733}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin-top:36px}
+.gallery figure{background:var(--paper);padding:10px 10px 12px;border-radius:18px}
+.gallery img{width:100%;display:block;border-radius:10px;transition:transform .2s}
+.gallery a:hover img{transform:scale(1.015)}
+.gallery figcaption{font-family:'Yellowtail',cursive;color:var(--pink);font-size:1.5rem;padding:6px 6px 0}
+.video{margin-top:36px;background:var(--paper);padding:10px 10px 12px;border-radius:18px;max-width:760px}
+.video video{width:100%;display:block;border-radius:10px;background:#000;aspect-ratio:16/9}
+.video figcaption{font-family:'Yellowtail',cursive;color:var(--pink);font-size:1.5rem;padding:6px 6px 0}
+.project .logo-big{display:block;width:min(100%,760px);height:auto;margin:0 auto 36px}
+.stickers{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:40px;align-items:end}
+.stickers figure{text-align:center}
+.stickers img{width:100%;max-width:300px;height:auto;filter:drop-shadow(0 8px 10px rgba(0,0,0,.18));transition:transform .2s}
+.stickers figure:nth-child(1) img{transform:rotate(-4deg)}
+.stickers figure:nth-child(3) img{transform:rotate(4deg)}
+.stickers img:hover{transform:rotate(0) scale(1.04)!important}
+.stickers figcaption{font-family:'Yellowtail',cursive;color:var(--pink);font-size:1.5rem;margin-top:8px}
+.gallery.frai{grid-template-columns:minmax(0,270px);justify-content:center}
+.gallery.frai figure:first-child img{border-radius:18px}
+@media(max-width:800px){.gallery.frai{grid-template-columns:1fr}.gallery.frai figure:first-child{max-width:270px}}
+.hint{display:block;font-size:.72rem;color:var(--grey);padding:2px 6px 0;font-style:italic}
+.gallery.one{grid-template-columns:minmax(0,560px);justify-content:center}
+.vlink{position:relative;display:block;border-radius:10px;overflow:hidden;aspect-ratio:16/9;background:#000}
+.vlink img{width:100%;height:100%;object-fit:cover;display:block}
+.play{position:absolute;left:50%;top:50%;width:72px;height:72px;margin:-36px 0 0 -36px;border-radius:50%;background:var(--pink);box-shadow:0 6px 16px rgba(0,0,0,.3);transition:transform .2s}
+.play::after{content:'';position:absolute;left:29px;top:21px;border-left:22px solid #fff;border-top:15px solid transparent;border-bottom:15px solid transparent}
+.vlink:hover .play{transform:scale(1.1)}
+.alt{background:#e9e4f6}
+.alt-y{background:#fbf0c4}
+.alt-y .gallery{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.alt-y .gallery figure{background:var(--white)}
+
+/* CONTACTO */
+#contacto{text-align:center;background:var(--pink);color:#fff;padding:110px 0 120px;overflow:hidden}
+#contacto .script{color:#fff;margin-bottom:6px}
+.cbig{font-family:'Archivo Black',sans-serif;font-size:clamp(3.4rem,14vw,9.5rem);line-height:.9;letter-spacing:-.02em;text-transform:uppercase;color:#fff;margin:0 0 48px;position:relative;z-index:2;text-shadow:.04em .04em 0 var(--ink)}
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;position:relative;z-index:2;max-width:860px;margin:0 auto}
+.ccard{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-width:0;padding:34px 22px;background:var(--white);color:var(--ink);border-radius:30px;text-decoration:none;box-shadow:0 14px 28px rgba(0,0,0,.18);transform:rotate(var(--r,0deg));transition:transform .2s,background .2s}
+a.ccard:hover{transform:rotate(0) translateY(-6px);background:var(--sun)}
+.ccard .lbl{font-family:'Yellowtail',cursive;color:var(--pink);font-size:2rem;line-height:1}
+.ccard .val{font-family:'Archivo Black',sans-serif;font-size:clamp(1rem,2.2vw,1.4rem);overflow-wrap:anywhere;user-select:all}
+.ccard button{font:inherit;font-size:.85rem;font-weight:700;border:0;border-radius:999px;padding:8px 18px;background:var(--ink);color:var(--white);cursor:pointer;margin-top:4px}
+.ccard button:hover{background:var(--pink)}
+footer{text-align:center;color:var(--grey);font-size:.8rem;padding:0 0 30px}
+
+@media(max-width:800px){
+  nav ul{gap:12px;font-size:.72rem}
+  nav .brand{display:none}
+  section{padding:60px 0}
+  .about{grid-template-columns:1fr}
+  .cols{grid-template-columns:1fr}
+  .project{padding:26px}
+  .burst.big{display:none}
+}
+@media(prefers-reduced-motion:no-preference){
+  .spin{animation:spin 24s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#inicio">Sara Cañon</a>
+    <ul>
+      <li><a href="#sobre">Sobre mí</a></li>
+      <li><a href="#investigacion">Investigación</a></li>
+      <li><a href="#estrategia">Estrategia</a></li>
+      <li><a href="#resultado">Resultado</a></li>
+      <li><a href="#creatividad">Creatividad</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- INICIO -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="bolt" viewBox="0 0 60 90"><path d="M38 3 L6 46 H26 L16 86 L54 36 H33 Z" fill="#fff" stroke="#1c1a1a" stroke-width="3.5" stroke-linejoin="round"/><circle cx="29" cy="30" r="6" fill="#fff" stroke="#1c1a1a" stroke-width="2.5"/><circle cx="42" cy="26" r="6" fill="#fff" stroke="#1c1a1a" stroke-width="2.5"/><circle cx="30" cy="31" r="2.6" fill="#1c1a1a"/><circle cx="43" cy="27" r="2.6" fill="#1c1a1a"/></symbol>
+  <symbol id="heart" viewBox="0 0 80 74"><path d="M40 70 C10 48 4 30 12 16 C20 4 36 8 40 20 C44 8 60 4 68 16 C76 30 70 48 40 70Z" fill="#fff" stroke="#1c1a1a" stroke-width="3.5" stroke-linejoin="round"/><circle cx="31" cy="30" r="6" fill="#fff" stroke="#1c1a1a" stroke-width="2.5"/><circle cx="48" cy="30" r="6" fill="#fff" stroke="#1c1a1a" stroke-width="2.5"/><circle cx="32" cy="31" r="2.6" fill="#1c1a1a"/><circle cx="49" cy="31" r="2.6" fill="#1c1a1a"/><path d="M33 44 Q40 50 47 44" fill="none" stroke="#1c1a1a" stroke-width="3" stroke-linecap="round"/></symbol>
+  <symbol id="spark" viewBox="0 0 40 40"><path d="M20 2 Q22 18 38 20 Q22 22 20 38 Q18 22 2 20 Q18 18 20 2Z" fill="none" stroke="#1c1a1a" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="sparky" viewBox="0 0 40 40"><path d="M20 2 Q22 18 38 20 Q22 22 20 38 Q18 22 2 20 Q18 18 20 2Z" fill="#fcb92d"/></symbol>
+</svg>
+<section id="inicio" class="hero">
+  <div class="wrap">
+    <div class="plastic">
+      <div class="sheet-shadow"><div class="sheet"></div></div>
+      <div class="stage">
+        <svg class="sp" style="left:30%;top:9%;width:4.4cqw;height:4.4cqw"><use href="#sparky"/></svg>
+        <svg class="sp hide-s" style="right:26%;top:12%;width:4cqw;height:4cqw"><use href="#spark"/></svg>
+        <svg class="doodle hide-s" style="left:5%;top:56%;width:7cqw;transform:rotate(-8deg)"><use href="#bolt"/></svg>
+        <h1 class="title"><span>Sara</span><span>Cañon</span></h1>
+        <div class="burst" data-burst="22" style="left:5%;top:8%;width:15cqw;height:15cqw;background:#f063c4">
+          <div class="burst" data-burst="22" style="inset:5%;background:#f7e53b;position:absolute"><span style="transform:rotate(-10deg);font-size:3.2cqw">good<br>vibes</span></div>
+        </div>
+        <div class="burst" data-burst="22" style="right:5%;top:8%;width:14cqw;height:14cqw;background:#f063c4">
+          <div class="burst" data-burst="22" style="inset:6%;background:#f7e53b;position:absolute">
+            <svg class="face" viewBox="0 0 100 100"><circle cx="34" cy="38" r="5.5" fill="#1c1a1a"/><circle cx="66" cy="38" r="5.5" fill="#1c1a1a"/><path d="M22 56 Q50 90 78 56" fill="none" stroke="#1c1a1a" stroke-width="7" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+        <p class="role">Social Media Strategist<span class="sub">Influencer Marketing Jr</span></p>
+        <span class="year">2026</span>
+        <div class="burst" data-burst="16" style="left:6%;bottom:8%;width:14cqw;height:14cqw;background:#7fd3c5;font-size:3cqw"><span style="transform:rotate(-8deg)">you<br>can</span></div>
+        <div class="burst" data-burst="14" style="right:7%;bottom:9%;width:12cqw;height:12cqw;background:#f063c4;color:#fff;font-size:3cqw"><span style="transform:rotate(8deg)">cool</span></div>
+        <svg class="doodle hide-s" style="right:4%;top:51%;width:7cqw;transform:rotate(8deg)"><use href="#heart"/></svg>
+      </div>
+    </div>
+    <a class="btn" href="#investigacion">Ver proyectos</a>
+  </div>
+</section>
+
+<!-- SOBRE MÍ -->
+<section id="sobre">
+  <span class="sparkle" style="top:60px;right:8%">✦</span>
+  <div class="wrap">
+    <h2 class="script">Hello</h2>
+    <div class="about">
+      <div class="polaroid">
+        <span class="tape"></span>
+        <img src="img/sara.jpg" alt="Sara Cañon en versión Lego">
+        <div class="burst" data-burst="16" style="width:96px;height:96px;background:var(--lilac);right:-22px;bottom:-22px;font-size:1.15rem;color:var(--pink);border:0"><span style="transform:rotate(-10deg)">good<br>vibes</span></div>
+      </div>
+      <div>
+        <p>Me apasionan las redes sociales, sobre todo lo que pasa detrás de ellas: la estrategia, la lectura de audiencias y las ideas que conecten con las personas.</p>
+        <p>Soy curiosa por naturaleza, y esa curiosidad es mi mejor herramienta de trabajo: investigo, conecto ideas y convierto lo que observo en estrategias con sentido.</p>
+        <div class="facts">
+          <h4>Fun Facts ✦</h4>
+          <ul>
+            <li><b>Vivo con música puesta.</b> La escucho en todo momento.</li>
+            <li><b>Disfruto la comida.</b> Para mí, comer bien es un plan y una forma de conocer culturas.</li>
+            <li><b>Amo a los perritos</b> (y a los animales en general). Si hay uno cerca, ya tiene mi atención.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTIGACIÓN -->
+<section id="investigacion">
+  <span class="sparkle" style="top:50px;left:6%">✦</span>
+  <div class="wrap">
+    <h2 class="script">Investigación</h2>
+    <article class="project alt">
+      <span class="tape"></span>
+      <div class="p-head">
+        <img class="logo" style="height:clamp(130px,26vw,210px);max-width:100%" src="img/frailejon-logo.png" alt="Logo Frailejón Ernesto Pérez">
+      </div>
+      <div class="cols">
+        <div><h4>Objetivo</h4><p>Crear una campaña a nivel Colombia para la recaudación de fondos para la escritura y producción del primer capítulo de la 3.ª temporada de la serie.</p></div>
+        <div><h4>Reto</h4><p>Recaudar 360 millones COP.</p></div>
+        <div><h4>Resultado</h4><p>Lista de 35 contactos para colaboraciones y donaciones a la vaki y a la campaña “El álbum para Frailejón Ernesto Pérez”.</p></div>
+      </div>
+      <div class="gallery frai">
+        <figure><a href="https://canva.link/j7rx7z1qr5y0pky" target="_blank" rel="noopener" title="Ver el reel en Canva"><img src="img/frailejon-reel.jpg" alt="Mockup del reel con el Frailejón Ernesto Pérez"></a><figcaption>Campaña Frailejón: reel</figcaption><small class="hint">Click para acceder a las fases</small></figure>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ESTRATEGIA -->
+<section id="estrategia">
+  <div class="wrap">
+    <h2 class="script">Estrategia</h2>
+    <article class="project">
+      <span class="tape"></span>
+      <div class="p-head"><h3>Portafolio Biblioteca</h3></div>
+      <div class="cols">
+        <div><h4>Objetivo</h4><p>Incrementar el uso de los servicios digitales y presenciales de la Biblioteca, impulsando el tráfico calificado hacia su página web y fomentando el acceso a sus herramientas académicas.</p></div>
+        <div><h4>Reto</h4><p>Crear una estrategia que atraiga tráfico calificado a la página web de la Biblioteca y motive la exploración de sus recursos.</p></div>
+        <div><h4>Resultado</h4><p>Estrategia de campaña aprobada por el cliente y desarrollo de los banners correspondientes a la primera fase de implementación.</p></div>
+      </div>
+      <div class="gallery one">
+        <figure><a href="https://utadeoeduco0-my.sharepoint.com/:b:/r/personal/sara_canons_utadeo_edu_co/Documents/SARA_CA%C3%91%C3%93N_EVIDENCIAS_PROFESIONALES/Investigaci%C3%B3n/PORTAFOLIO%20BIBLIOTECA-2.pdf?d=w88bfd57132474be5a207bb4e7498320b&amp;csf=1&amp;web=1&amp;e=WaeSek" target="_blank" rel="noopener" title="Ver el portafolio de la Biblioteca"><img src="img/biblioteca-benchmark.jpg" alt="Benchmark de la Biblioteca: deskresearch y encuesta a 122 estudiantes"></a><figcaption>Campaña Biblioteca: benchmark</figcaption><small class="hint">Click para acceder a las fases</small></figure>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- RESULTADO -->
+<section id="resultado">
+  <div class="wrap">
+    <h2 class="script">Resultado</h2>
+    <article class="project">
+      <span class="tape"></span>
+      <div class="p-head">
+        <img class="logo" style="height:96px" src="img/cafe18-logo.png" alt="Logo Café 18">
+      </div>
+      <div class="cols">
+        <div><h4>Objetivo</h4><p>Entender la identidad de marca para realizar diferentes piezas gráficas, como jingles y storytelling, sin perder la esencia de marca.</p></div>
+        <div><h4>Reto</h4><p>Plasmar la identidad visual sin perder la esencia de lo que es la marca. Uno de los mayores retos fue la producción: realizar los guiones y los storyboards.</p></div>
+        <div><h4>Resultado</h4><p>La marca aprobó la propuesta y dio el visto bueno a todos los entregables.</p></div>
+      </div>
+      <figure class="video">
+        <a class="vlink" href="https://utadeoeduco0-my.sharepoint.com/:v:/g/personal/sara_canons_utadeo_edu_co/IQBR0XOuoSXlSrmjCxL8v8fyAaRipmt3EUdARkQogpa-XJI?e=YYQ468&amp;nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D" target="_blank" rel="noopener" title="Ver el video"><img src="img/cafe18-poster.jpg" alt="Story de Café 18: ver el video"><span class="play" aria-hidden="true"></span></a>
+        <figcaption>Campaña Café 18: storytelling</figcaption><small class="hint">Click para acceder a las piezas</small>
+      </figure>
+    </article>
+  </div>
+</section>
+
+<!-- CREATIVIDAD -->
+<section id="creatividad">
+  <span class="sparkle o" style="top:60px;right:10%">✧</span>
+  <div class="wrap">
+    <h2 class="script">Creatividad</h2>
+    <article class="project alt-y">
+      <span class="tape"></span>
+      <div class="p-head"><h3>FILBO</h3></div>
+      <div class="cols">
+        <div><h4>Objetivo</h4><p>Atraer al público joven a la lectura y aumentar las interacciones en redes sociales.</p></div>
+        <div><h4>Reto</h4><p>Realizar una estrategia digital de impacto en 3 meses para cubrir el encuentro en la FILBO.</p></div>
+        <div><h4>Resultado</h4><p>Se convirtió en mayor interacción en Instagram y Facebook, atrayendo a más público joven a nuestras redes sociales.</p></div>
+      </div>
+      <div class="gallery one" style="grid-template-columns:minmax(0,340px)">
+        <figure><a href="https://canva.link/1atld24ugustofc" target="_blank" rel="noopener" title="Ver la campaña FILBO en Canva"><img src="img/filbo-2.jpg" alt="Pieza FILBO: Luma Fisgona, Día del Libro"></a><figcaption>Campaña FILBO: Luma Fisgona</figcaption><small class="hint">Click para acceder a las piezas</small></figure>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- CREATIVIDAD · INHOUSE CORE -->
+<section id="inhousecore">
+  <span class="sparkle" style="top:50px;left:7%">✦</span>
+  <div class="wrap">
+    <h2 class="script">Creatividad</h2>
+    <article class="project">
+      <span class="tape"></span>
+      <img class="logo-big" src="img/inhousecore-logo.png" alt="Logo InHouse Core">
+      <div class="cols">
+        <div><h4>Objetivo</h4><p>Conmemorar los 6 años de trayectoria, historias y muchas vivencias.</p></div>
+        <div><h4>Reto</h4><p>Celebrar 6 años es recordar que detrás de cada gran campaña hay una persona. En la In House valoramos lo crudo de la creatividad y lo puro de la estrategia. Volvemos al origen porque lo humano es lo único que no se puede automatizar. In House: 6 años siendo Raw.</p></div>
+        <div><h4>Resultado</h4><p>Se convirtió en followers en nuestra página de Instagram, reforzando así la identidad visual y la recordación entre la comunidad tadeísta.</p></div>
+      </div>
+      <div class="stickers" style="grid-template-columns:minmax(0,300px);justify-content:center">
+        <figure><a href="https://canva.link/7jg057ol53h0ti5" target="_blank" rel="noopener" title="Ver la campaña InHouse Core en Canva"><img src="img/sticker-1.png" alt="Sticker InHouse Core rosado"></a><figcaption>Campaña InHouse Core: sticker</figcaption><small class="hint">Click para acceder a las piezas</small></figure>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="burst big" data-burst="20" style="width:150px;height:150px;background:var(--sun);top:12%;left:7%;font-size:1.9rem;color:var(--pink)"><span style="transform:rotate(-10deg)">hola!</span></div>
+  <div class="burst big" data-burst="16" style="width:110px;height:110px;background:#7fd3c5;bottom:2%;right:3%;font-size:1.5rem;color:var(--pink)"><span style="transform:rotate(8deg)">you<br>can</span></div>
+  <span class="sparkle" style="top:16%;right:14%;font-size:2.6rem">✦</span>
+  <span class="sparkle" style="bottom:14%;left:14%;font-size:2rem">✦</span>
+  <div class="wrap">
+    <h2 class="script">Contacto</h2>
+    <p class="cbig">Hablemos</p>
+    <div class="contact">
+      <a class="ccard" style="--r:-1.5deg" href="https://wa.me/573012131167" target="_blank" rel="noopener"><span class="lbl">WhatsApp</span><span class="val">301 213 1167</span></a>
+      <a class="ccard" style="--r:1.5deg" href="https://www.instagram.com/saraa.thougthss/" target="_blank" rel="noopener"><span class="lbl">Instagram</span><span class="val">@saraa.thougthss</span></a>
+      <a class="ccard" style="--r:1deg" href="https://www.linkedin.com/in/sara-ca%C3%B1on/" target="_blank" rel="noopener"><span class="lbl">LinkedIn</span><span class="val">Sara Cañon</span></a>
+      <a class="ccard" style="--r:-1deg" href="mailto:Valcanon1609@gmail.com"><span class="lbl">Correo</span><span class="val">Valcanon1609@gmail.com</span></a>
+    </div>
+  </div>
+</section>
+<footer>© 2026 Sara Cañon</footer>
+
+<script>
+// Convierte los .burst con data-burst en estrellas tipo sticker
+document.querySelectorAll('[data-burst]').forEach(function(el){
+  var n=+el.dataset.burst,p=[];
+  for(var i=0;i<n*2;i++){
+    var a=Math.PI*i/n,r=i%2?42:50;
+    p.push((50+r*Math.cos(a)).toFixed(1)+'% '+(50+r*Math.sin(a)).toFixed(1)+'%');
+  }
+  el.style.clipPath='polygon('+p.join(',')+')';
+});
+</script>
+</body>
+</html>
